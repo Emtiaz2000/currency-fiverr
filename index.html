@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+ <input type="number" placeholder="0" id="NumInput">
+   
+   <div>
+      <h2 class="result">0</h2>
+   </div>
+<script>
+  const input = document.querySelector('#NumInput')
+  const showRes = document.querySelector('.result')
+  input.addEventListener('keyup',()=>{
+    if(input.value !=='' && input.value > 0){
+      let inputnum = parseInt(input.value)
+    let finalRes = (inputnum/10)+2
+    showRes.textContent = finalRes
+    }else{
+      showRes.textContent = 0
+      input.value=0
+    }
+    
+
+  })
+</script>
+  </body>
+</html>
